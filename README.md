@@ -34,6 +34,7 @@ Calling ```Save()``` on an instance of the ```GameStateManager``` class will sav
 
 - GameObjects to be serialized must have unique names.
 - GameObjects must exists at startup of the game and persist (not be deleted) for the duration of the game.
+- The save only works for the current scene. Multiple scenes will need their own save files.
 - Dynamically spawned objects will not be re-spawned when the game state is re-loaded.
 
 ## Installation ## 
