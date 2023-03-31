@@ -1,6 +1,6 @@
 # Unity Simple Load/Save
 
-This library provides simple load and save of game state for fields marked with a ```[GameState]``` on any ```MonoBehaviour``` that implements the ```IGameState``` interface. The state is stored in a JSON format file called ```GameState.json``` in the ```Application.persistentDataPath``` directory. 
+This library provides simple load and save of game state for fields marked with a ```[GameState]``` attribute on any ```MonoBehaviour``` that implements the ```IGameState``` interface. The state is stored in a JSON format file called ```GameState.json``` in the ```Application.persistentDataPath``` directory. 
 
 ## Example ##
 
