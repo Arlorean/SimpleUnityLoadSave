@@ -1,6 +1,6 @@
 # Simple Unity Load/Save
 
-This library provides simple load and save of game state for fields marked with a [GameState] on MonoBehaviours that implement the IGameState interface. The state is stored in file called ```GameState.json``` in the ```Application.persistentDataPath``` directory.
+This library provides simple load and save of game state for fields marked with a ```[GameState]``` on any ```MonoBehaviour``` that implements the ```IGameState``` interface. The state is stored in a JSON format file called ```GameState.json``` in the ```Application.persistentDataPath``` directory. 
 
 ## Example ##
 
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour, IGameState
 
 public class Item : MonoBehaviour, IGameState
 {
-    public Sprite sprite;
+    public Sprite sprite; // Not serialized
 }
 
 public class StackableItem : Item
@@ -34,7 +34,15 @@ Calling ```Save()``` on an instance of the ```GameStateManager``` class will sav
 
 - GameObjects to be serialized must have unique names.
 - GameObjects must exists at startup of the game and persist (not be deleted) for the duration of the game.
-- Dynamically spawned objects that have different names will not be re-spawned when the game state is re-loaded.
+- Dynamically spawned objects will not be re-spawned when the game state is re-loaded.
+
+## Installation ## 
+
+Add the directory ```SimpleUnityLoadSave``` with the three script files to the ```Assets``` folder of your project. It will appear as a standalone automatically referenced library in Visual Studio (or your editor of choice).
+
+Netwonsoft Json package [com.unity.nuget.newtonsoft-json](https://docs.unity3d.com/Packages/com.unity.nuget.newtonsoft-json@3.1/manual/index.html) is in the packages.json file already for this example but you may will need to add it to your own project to get it to work:
+
+![image](https://user-images.githubusercontent.com/1547800/229220651-4baa6feb-5714-4a24-8bca-1a997caf347a.png)
 
 ## Save File Format ##
 
@@ -107,3 +115,4 @@ This is an example save file using the ```Player```, ```Item``` and ```Stackable
   }
 }
 ```
+
