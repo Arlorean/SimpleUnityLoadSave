@@ -38,7 +38,7 @@ Calling ```Save()``` on an instance of the ```GameStateManager``` class will sav
 
 ## Installation ## 
 
-Add the directory ```SimpleUnityLoadSave``` with the three script files to the ```Assets``` folder of your project. It will appear as a standalone automatically referenced library in Visual Studio (or your editor of choice).
+Add the directory ```UnitySimpleLoadSave``` with the three script files to the ```Assets``` folder of your project. It will appear as a standalone automatically referenced library in Visual Studio (or your editor of choice).
 
 Netwonsoft Json package [com.unity.nuget.newtonsoft-json](https://docs.unity3d.com/Packages/com.unity.nuget.newtonsoft-json@3.1/manual/index.html) is in the packages.json file already for this example but you may will need to add it to your own project to get it to work:
 
